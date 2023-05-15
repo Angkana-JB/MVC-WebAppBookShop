@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebAppBookShop.Models.ViewModels.BookCategoryViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>รายชื่อหนังสือทั้งหมด</h1>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>ชื่อหนังสือ</th>
+            <th>รหัส</th>
+            <th>ราคาขาย</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.BookName</td>
+                 <td>@item.Isbn</td>
+                  <td>@item.BookPrice</td>
+                  <td>@item.CategoryName </td>
+                  @* <td>@item.Category.CategoryName</td>
+                   <td>@item.Publish.PublishName</td>*@
+            </tr>
+        }
+    </tbody>
+
+</table>
+
